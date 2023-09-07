@@ -38,3 +38,48 @@ public class Matrices {
             }
         }
 
+        System.out.println("Seleccione una operación:");
+        System.out.println("1. Suma de matrices");
+        System.out.println("2. Producto de matrices");
+        System.out.println("3. Producto de un escalar con una matriz");
+        System.out.println("4. Traspuesta de una matriz");
+        int opcion = scanner.nextInt();
+
+        switch (opcion) {
+            case 1:
+                if (filaMatriz1 == filaMatriz2 && columnaMatriz1 == columnaMatriz2) {
+                    double[][] sumaMatrices = sumarMatrices(matriz1, matriz2);
+                    imprimirMatriz(sumaMatrices);
+                } else {
+                    System.out.println("No se puede realizar la suma de matrices. Las dimensiones no coinciden.");
+                }
+                break;
+
+            case 2:
+                if (columnaMatriz1 == filaMatriz2) {
+                    double[][] productoMatrices = multiplicarMatrices(matriz1, matriz2);
+                    imprimirMatriz(productoMatrices);
+                } else {
+                    System.out.println("No se puede realizar el producto de matrices. Las dimensiones no coinciden.");
+                }
+                break;
+
+            case 3:
+                System.out.print("Ingrese el escalar: ");
+                double escalar = scanner.nextDouble();
+                double[][] productoEscalarMatriz = multiplicarEscalarMatriz(escalar, matriz1);
+                imprimirMatriz(productoEscalarMatriz);
+                break;
+
+            case 4:
+                double[][] matrizTranspuesta = calcularMatrizTranspuesta(matriz1);
+                imprimirMatriz(matrizTranspuesta);
+                break;
+
+            default:
+                System.out.println("Opción no válida.");
+        }
+
+        scanner.close();
+    }
+
