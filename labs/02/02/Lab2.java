@@ -41,3 +41,41 @@ public class Lab2 {
         }
     }
 
+    // Función para generar un arreglo de números double aleatorios
+    public static double[] generateRandomArray(int size) {
+        double[] array = new double[size];
+        Random random = new Random();
+        for (int i = 0; i < size; i++) {
+            array[i] = random.nextDouble();
+        }
+        return array;
+    }
+
+    // Implementación del método de ordenamiento burbuja
+    public static void bubbleSort(double[] array) {
+        int n = array.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (array[j] > array[j + 1]) {
+                    double temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    // Implementación del método de ordenamiento por inserción
+    public static void insertionSort(double[] array) {
+        int n = array.length;
+        for (int i = 1; i < n; i++) {
+            double key = array[i];
+            int j = i - 1;
+            while (j >= 0 && array[j] > key) {
+                array[j + 1] = array[j];
+                j--;
+            }
+            array[j + 1] = key;
+        }
+    }
+
