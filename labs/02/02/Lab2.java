@@ -79,3 +79,48 @@ public class Lab2 {
         }
     }
 
+    // Implementación del método de ordenamiento por selección
+    public static void selectionSort(double[] array) {
+        int n = array.length;
+        for (int i = 0; i < n - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < n; j++) {
+                if (array[j] < array[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            double temp = array[minIndex];
+            array[minIndex] = array[i];
+            array[i] = temp;
+        }
+    }
+
+    // Implementación del algoritmo de mergesort
+    public static void mergeSort(double[] array) {
+        if (array.length > 1) {
+            int mid = array.length / 2;
+            double[] left = Arrays.copyOfRange(array, 0, mid);
+            double[] right = Arrays.copyOfRange(array, mid, array.length);
+
+            mergeSort(left);
+            mergeSort(right);
+
+            int i = 0, j = 0, k = 0;
+            while (i < left.length && j < right.length) {
+                if (left[i] < right[j]) {
+                    array[k++] = left[i++];
+                } else {
+                    array[k++] = right[j++];
+                }
+            }
+
+            while (i < left.length) {
+                array[k++] = left[i++];
+            }
+
+            while (j < right.length) {
+                array[k++] = right[j++];
+            }
+        }
+    }
+}
