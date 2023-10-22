@@ -14,7 +14,7 @@ import org.jfree.data.category.DefaultCategoryDataset;
 
 /**
  *
- * @author Estudiante
+ * @author Camilo Tibaduiza
  */
 public class Barras extends javax.swing.JFrame {
 
@@ -49,13 +49,13 @@ public class Barras extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe Print", 0, 18)); // NOI18N
-        jLabel1.setText("Calificación de la Materia de Matemáticas ");
+        jLabel1.setText("Calificación de la Materia de Programacion ");
 
-        jLabel2.setText("PEDRO");
+        jLabel2.setText("CAMILO");
 
-        jLabel3.setText("PABLO");
+        jLabel3.setText("SANTIAGO");
 
-        jLabel4.setText("LUIS");
+        jLabel4.setText("TANIA");
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,13 +163,13 @@ public class Barras extends javax.swing.JFrame {
         
         DefaultCategoryDataset datos= new DefaultCategoryDataset();
         
-        datos.setValue(n1,"Matematicas","Pedro");
-        datos.setValue(n2,"Matematicas","Pablo");
-        datos.setValue(n3,"Matematicas","Luis");
+        datos.setValue(n1,"Programacion","Camilo");
+        datos.setValue(n2,"Programacion","Santiago");
+        datos.setValue(n3,"Programacion","Tania");
         
         JFreeChart grafico_barras  = ChartFactory.createBarChart3D(
-        "Calificaciones de Matemáticas",    
-        "Estudiantes de Matemáticas",    
+        "Calificaciones de Programacion",    
+        "Estudiantes de Programacion",    
         "Calificación",
         datos,
         PlotOrientation.VERTICAL,
