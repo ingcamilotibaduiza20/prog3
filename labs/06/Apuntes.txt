@@ -1,0 +1,15 @@
+Normalmente, los programas  Java comienzan la ejecución con el método main() y continúan ejecutando todas las instrucciones hasta el final.
+Este es un ejemplo  de una aplicación de un solo subproceso que se ejecuta en la máquina virtual Java  (JavaVM).
+El segundo subproceso siempre se ejecuta en  JavaVM, el  recolector de basura, que es responsable de administrar la memoria eliminando  objetos que ya no son necesarios.
+Una aplicación que imprime solo  el texto Hola Mundo en la pantalla se ejecuta en un entorno multiproceso.
+Hilo principal (ejecución del programa ) y recolector de basura.
+En un programa con una interfaz gráfica de usuario (GUI) , JavaVM inicia automáticamente varios subprocesos.
+Uno de ellos es responsable de enviar  eventos a los métodos que los manejan (por ejemplo, clics del mouse y del teclado y movimientos del mouse) 
+y el otro es responsable de dibujar en la ventana  GUI.
+
+Ventajas y desventajas del uso de múltiples hilos
+Mejor interacción con el usuario
+Simulación de actividades simultáneas
+Optimización del uso de múltiples procesadores
+Realizar otras actividades mientras se hacen operaciones de E/S lentas
+Uso de recursos
