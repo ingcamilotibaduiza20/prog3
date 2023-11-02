@@ -38,7 +38,7 @@ class Carro extends Thread {
     }
 }
 
-public class CompetenciaCarros {
+public class CompetenciaCarros{
     public static void main(String[] args) {
         List<Carro> carros = new ArrayList<>();
 
