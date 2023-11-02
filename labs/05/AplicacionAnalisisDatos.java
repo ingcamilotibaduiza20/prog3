@@ -39,20 +39,17 @@ public class AplicacionAnalisisDatos {
         generarGraficas(datosFiltrados);
     }
 
-    // Método para obtener datos desde un archivo Excel (necesitarás una biblioteca como Apache POI).
+    // Método para datos desde un archivo Excel
     public static List<Dato> obtenerDatosDeExcel() {
-        // Implementa la lógica para cargar datos desde Excel aquí.
-        // Retorna una lista de objetos Dato.
         return new ArrayList<>();
     }
 
     // Método para obtener la lista de países disponibles en los datos.
     public static List<String> obtenerPaisesDisponibles(List<Dato> datos) {
-        // Implementa la lógica para obtener la lista de países aquí.
         return Collections.emptyList();
     }
 
-    // Método para obtener la lista de ciudades disponibles en los datos.
+    // Método para lista de ciudades disponibles en los datos.
     public static List<String> obtenerCiudadesDisponibles(List<Dato> datos) {
         // Implementa la lógica para obtener la lista de ciudades aquí.
         return Collections.emptyList();
@@ -67,7 +64,6 @@ public class AplicacionAnalisisDatos {
     // Método para generar un archivo CSV con los resultados.
     public static void generarReporteCSV(List<TipoDeRobo> top3TiposDeRobo, String pais, String ciudad) {
         try (FileWriter writer = new FileWriter("reporte.csv")) {
-            // Implementa la lógica para escribir los datos en formato CSV aquí.
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -75,7 +71,6 @@ public class AplicacionAnalisisDatos {
 
     // Método para generar gráficas estadísticas comparativas.
     public static void generarGraficas(List<Dato> datos) {
-        // Implementa la lógica para generar gráficas aquí.
     }
 }
 
@@ -83,15 +78,11 @@ class Dato {
     private String pais;
     private String ciudad;
     private String tipoDeRobo;
-    // Otros atributos y métodos relevantes.
 
-    // Getters y setters.
 }
 
 class TipoDeRobo {
     private String nombre;
     private int cantidad;
-    // Otros atributos y métodos relevantes.
 
-    // Getters y setters.
 }
