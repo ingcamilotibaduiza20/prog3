@@ -30,7 +30,7 @@ public class JFrameCarrera extends javax.swing.JFrame {
     public JLabel getM4(){
         return M4;
     }
-    public JLabel getBarrera(){
+    public JLabel get_Barrera(){
         return Barrera;
     }
     /**
