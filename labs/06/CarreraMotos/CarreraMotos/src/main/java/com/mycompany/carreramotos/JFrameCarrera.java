@@ -53,6 +53,7 @@ public class JFrameCarrera extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         M1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/carreramotos/Moto1.png"))); // NOI18N
@@ -96,6 +97,7 @@ public class JFrameCarrera extends javax.swing.JFrame {
             .addComponent(Barrera, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        jLabel1.setFont(new java.awt.Font("Showcard Gothic", 3, 18)); // NOI18N
         jLabel1.setText("CARRERA DE MOTOS");
 
         Btiniciar.setText("Iniciar Carrera :D");
@@ -118,7 +120,7 @@ public class JFrameCarrera extends javax.swing.JFrame {
                         .addGap(233, 233, 233)
                         .addComponent(Btiniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(349, 349, 349)
+                        .addGap(330, 330, 330)
                         .addComponent(jLabel1)))
                 .addContainerGap(52, Short.MAX_VALUE))
         );
@@ -139,6 +141,18 @@ public class JFrameCarrera extends javax.swing.JFrame {
 
     private void BtiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtiniciarActionPerformed
         // TODO add your handling code here:
+        M1.setLocation(0,M1.getLocation().y);
+        M2.setLocation(0,M2.getLocation().y);
+        M3.setLocation(0,M3.getLocation().y);
+        M4.setLocation(0,M4.getLocation().y);
+        Carrera hilo1 = new Carrera(M1, this);
+        Carrera hilo2 = new Carrera(M2, this);
+        Carrera hilo3 = new Carrera(M3, this);
+        Carrera hilo4 = new Carrera(M4, this);
+        hilo1.start();
+        hilo2.start();
+        hilo3.start();
+        hilo4.start();
     }//GEN-LAST:event_BtiniciarActionPerformed
 
     /**

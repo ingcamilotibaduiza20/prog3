@@ -9,8 +9,8 @@ package com.mycompany.carreramotos;
  * @author  Cristian Camilo Tibaduiza Melgarejo
  */
 public class CarreraMotos {
-
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
+    public static void main(String[] args){
+        
     }
+
 }

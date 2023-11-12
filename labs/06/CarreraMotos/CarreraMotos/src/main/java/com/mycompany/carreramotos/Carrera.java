@@ -1,6 +1,7 @@
 package com.mycompany.carreramotos;
 
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -33,7 +34,19 @@ public class Carrera extends Thread{
                 
             } catch(InterruptedException e){
             }
-            if(eti.getLocation().x>=p.get_Barrera())
+            if(eti.getLocation().x>=p.get_Barrera().getLocation().x-10){
+                if(c1>c2&&c1>c3&&c1>c4){
+                    JOptionPane.showMessageDialog(null, "Gano la moto #1");
+                }else if(c2>c1&&c2>c3&&c2>c4){
+                    JOptionPane.showMessageDialog(null, "Gano la moto #2");
+                }else if(c3>c2&&c3>c1&&c3>c4){
+                    JOptionPane.showMessageDialog(null, "Gano la moto #3");
+                }else if(c4>c2&&c4>c3&&c4>c1){
+                    JOptionPane.showMessageDialog(null, "Gano la moto #4");
+                }else{
+                    JOptionPane.showMessageDialog(null, "Empate");
+                }
+            }
         }    
     }
 }
